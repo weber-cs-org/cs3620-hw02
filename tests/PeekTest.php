@@ -15,6 +15,7 @@ namespace App\Tests;
 
 use App\DLinkedStack;
 use App\Node;
+use PHPUnit\Framework\MockObject\BadMethodCallException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -28,6 +29,13 @@ use PHPUnit\Framework\TestCase;
  */
 class PeekTest extends TestCase
 {
+    /**
+     * Harness is the object under test
+     *
+     * @var mixed $harness
+     */
+    protected $harness;
+
     /**
      * Test
      *
@@ -55,7 +63,14 @@ class PeekTest extends TestCase
      */
     public function testPeekSuccess()
     {
-        // TODO implement arrange, act, assert
+        //arrange
+        $n = new Node();
+        $n->setItem(100);
+        $this->harness->push($n);
+        //act
+        $actual = $this->harness->peek();
+        //assert
+        $this->assertEquals(100, $actual->getItem());
     }
 
     /**
@@ -70,6 +85,9 @@ class PeekTest extends TestCase
      */
     public function testPeekFail()
     {
-        // TODO implement arrange, act, assert
+        //arrange & act
+        $actual = $this->harness->peek();
+        //assert
+        $this->assertEquals(null, $actual->getItem());
     }
 }

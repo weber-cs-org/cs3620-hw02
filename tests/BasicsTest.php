@@ -39,7 +39,7 @@ class BasicsTest extends TestCase
     public function testTrue(): void
     {
         // arrange & act & assert
-        $this->assertTrue(TRUE);
+        $this->assertTrue(true);
     }
 
     /**
@@ -55,7 +55,7 @@ class BasicsTest extends TestCase
     public function testFalse(): void
     {
         // arrange & act & assert
-        $this->assertFalse(FALSE);
+        $this->assertFalse(false);
     }
 
     /**

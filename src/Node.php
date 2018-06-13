@@ -127,7 +127,7 @@ class Node
      *
      * @return mixed
      */
-    public function getItem(): mixed
+    public function getItem()
     {
         return $this->_data;
     }

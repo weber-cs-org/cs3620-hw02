@@ -28,6 +28,7 @@ use PHPUnit\Framework\TestCase;
  */
 class PushTest extends TestCase
 {
+    protected $harness;
     /**
      * Test
      *
@@ -59,7 +60,7 @@ class PushTest extends TestCase
         $n = new Node();
         $n->setItem(100);
         // act
-        $actual = $harness->push($n);
+        $actual = $this->harness->push($n);
         // assert
         $this->assertTrue($actual);
     }
@@ -77,9 +78,9 @@ class PushTest extends TestCase
     public function testPushFail()
     {
         // arrange
-        $n = NULL;
+        $n = null;
         // act
-        $actual = $harness->push($n);
+        $actual = $this->harness->push($n);
         // assert
         $this->assertFalse($actual);
     }

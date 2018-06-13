@@ -28,6 +28,8 @@ use PHPUnit\Framework\TestCase;
  */
 class PopTest extends TestCase
 {
+    protected $harness;
+
     /**
      * Test
      *
@@ -58,8 +60,9 @@ class PopTest extends TestCase
         // arrange
         $n = new Node();
         $n->setItem(100);
+        $this->harness->push($n);
         // act
-        $actual = $harness->pop($n);
+        $actual = $this->harness->pop();
         // assert
         $this->assertTrue($actual);
     }
@@ -77,9 +80,9 @@ class PopTest extends TestCase
     public function testPopFail()
     {
         // arrange
-        $n = NULL;
+        $n = null;
         // act
-        $actual = $harness->pop($n);
+        $actual = $this->harness->pop();
         // assert
         $this->assertFalse($actual);
     }

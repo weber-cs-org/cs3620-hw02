@@ -28,6 +28,16 @@ use PHPUnit\Framework\TestCase;
  */
 class ConstructorTest extends TestCase
 {
+    /**
+     * Tests if unit-test can be run
+     *
+     * @category UnitTests
+     * @package  App\Tests
+     * @author   Don Stringham <donstringham@weber.edu>
+     * @license  MIT https://opensource.org/licenses/MIT
+     * @link     https://weber.edu
+     * @return   null
+     */
     public function testConstructor()
     {
         // arrange

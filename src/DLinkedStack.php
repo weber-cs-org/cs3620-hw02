@@ -50,8 +50,8 @@ class DLinkedStack implements StackInterface
      */
     public function __construct()
     {
-        $this->headPtr = NULL;
-        $this->topPtr = NULL;
+        $this->headPtr = null;
+        $this->topPtr = null;
     }
 
     /**
@@ -109,7 +109,7 @@ class DLinkedStack implements StackInterface
      */
     public function isEmpty(): bool
     {
-        //TODO return True if the list is empty
+        // TODO return True if the list is empty
     }
 
     /**
@@ -121,7 +121,7 @@ class DLinkedStack implements StackInterface
      */
     public function push($newNode): bool
     {
-        //TODO push a node on the Doubly Linked Stack
+        // TODO push a node on the Doubly Linked Stack
     }
 
     /**
@@ -131,7 +131,7 @@ class DLinkedStack implements StackInterface
      */
     public function pop(): bool
     {
-        //TODO pop an item from the stack - Return TRUE if successful
+        // TODO pop an item from the stack - Return TRUE if successful
     }
 
     /**
@@ -141,6 +141,6 @@ class DLinkedStack implements StackInterface
      */
     public function peek(): \App\Node
     {
-        //TODO return the node stored at the top of the stack (topPtr)
+        // TODO return the node stored at the top of the stack (topPtr)
     }
 }
